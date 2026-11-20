@@ -1,0 +1,41 @@
+name: Bug report
+description: Usage bar empty, wrong, or stuck
+labels: [bug]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Extension version
+      description: First line of the popup's "Copy details" output, or the version at chrome://extensions
+      placeholder: Claude Counter 0.5.8
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Popup "Copy details" output
+      description: Send one message, wait for the reply to finish, open the popup, click Copy details, paste here.
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what you expected
+      description: e.g. "bar stays empty after a reply" or "shows 100% while Settings → Usage shows 17%"
+    validations:
+      required: true
+  - type: dropdown
+    id: plan
+    attributes:
+      label: Plan
+      options: [Free, Pro, Max, Team / Enterprise, Not sure]
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and version
+      placeholder: Chrome 142
+  - type: markdown
+    attributes:
+      value: |
+        **Please don't attach a HAR here unless asked.** It contains the messages you sent. If one is needed, use a throwaway chat and the *sanitized* export.

@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="color-scheme" content="dark light" />
+<title>Claude Counter</title>
+<link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+<header class="cc-popup-header">
+	<img src="../icons/icon32.png" width="18" height="18" alt="" />
+	<h1>Claude Counter</h1>
+</header>
+
+<section class="cc-popup-section">
+	<h2>Bar position</h2>
+	<div class="cc-segmented" id="position-toggle" role="radiogroup" aria-label="Bar position">
+		<button type="button" class="cc-segmented__option" data-value="inline">In chat box</button>
+		<button type="button" class="cc-segmented__option" data-value="top">Top of page</button>
+	</div>
+	<p class="cc-popup-hint">Applies instantly to every open claude.ai tab.</p>
+</section>
+
+<section class="cc-popup-section">
+	<h2>Usage</h2>
+	<div id="usage-summary" class="cc-usage-summary">
+		<p class="cc-popup-hint">Open a claude.ai tab to fetch usage.</p>
+	</div>
+	<p id="usage-diag" class="cc-popup-hint"></p>
+</section>
+
+<section class="cc-popup-section">
+	<h2>Live updates</h2>
+	<div id="live-diag" class="cc-usage-summary cc-diag"></div>
+	<button type="button" id="copy-diag" class="cc-copy-btn">Copy details</button>
+</section>
+
+<script src="../src/content/constants.js"></script>
+<script src="../src/content/store.js"></script>
+<script src="popup.js"></script>
+</body>
+</html>

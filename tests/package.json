@@ -1,0 +1,8 @@
+{
+  "name": "claude-counter-tests",
+  "private": true,
+  "scripts": {
+    "test": "node --test --test-concurrency=1 bridge.test.js"
+  },
+  "devDependencies": { "jsdom": "^24.1.0" }
+}
